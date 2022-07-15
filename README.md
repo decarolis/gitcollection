@@ -1,4 +1,4 @@
-# Título do projeto
+# Git Collection
 
 Git Collection é uma aplicação para criar uma lista dos seus repositórios favoritos.
 
