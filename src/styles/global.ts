@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 93.75%;
     }
 
-    @media (max-width: 1080px){
+    @media (max-width: 720px){
       font-size: 87.5%;
     }
   }
@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea, select, button {
-    font: 400 1rem "Roboto", sans-serif;
+    font: 400 1.2rem "Roboto", sans-serif;
   }
 
   #root {

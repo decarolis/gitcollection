@@ -47,7 +47,7 @@ export const Dashboard: React.FC = () => {
 
     if (!newRepo) {
       (() => {
-        setInputError('Informe o username/repositório');
+        setInputError('Enter username/repository');
         setTimeout(() => {
           setInputError('');
         }, 3000);
@@ -58,7 +58,7 @@ export const Dashboard: React.FC = () => {
     for (let i = 0; i < repos.length; i++) {
       if (repos[i].full_name === newRepo) {
         (() => {
-          setInputError('Repositório já existe na sua lista');
+          setInputError('Repository already exists in your list');
           setTimeout(() => {
             setInputError('');
           }, 3000);
@@ -74,7 +74,7 @@ export const Dashboard: React.FC = () => {
       setNewRepo('');
       setInputError('');
       (() => {
-        setInputSuccess('Repositório foi adicionado com sucesso');
+        setInputSuccess('Repository has been successfully added');
         setTimeout(() => {
           setInputSuccess('');
         }, 3000);
@@ -82,7 +82,7 @@ export const Dashboard: React.FC = () => {
     } catch (e) {
       setInputSuccess('');
       (() => {
-        setInputError('Repositório nao encontrado no GitHub');
+        setInputError('Repository not found on GitHub');
         setTimeout(() => {
           setInputError('');
         }, 3000);
@@ -93,7 +93,7 @@ export const Dashboard: React.FC = () => {
   return (
     <>
       <img src={logo} alt="GitCollection" />
-      <Title>Catálogo de repositórios do GitHub</Title>
+      <Title>GitHub Repository Catalog</Title>
       <Form hasError={Boolean(inputError)} onSubmit={handleAddRepo}>
         <input
           type="text"
@@ -101,7 +101,7 @@ export const Dashboard: React.FC = () => {
           onChange={handleInputChange}
           value={newRepo}
         />
-        <button type="submit">Buscar</button>
+        <button type="submit">Search</button>
       </Form>
 
       {!inputSuccess && !inputError && <Success>&nbsp;</Success>}

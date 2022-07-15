@@ -54,8 +54,8 @@ export const Repo: React.FC = () => {
       <Header>
         <img src={logo} alt="GitCollection" />
         <Link to="/">
-          <FiChevronLeft />
-          Voltar
+          <FiChevronLeft size={20} />
+          Home
         </Link>
       </Header>
       {repository && (
@@ -81,7 +81,7 @@ export const Repo: React.FC = () => {
             </li>
             <li>
               <strong>{repository.open_issues_count}</strong>
-              <span>Issues abertas</span>
+              <span>open issues</span>
             </li>
           </ul>
         </RepoInfo>
