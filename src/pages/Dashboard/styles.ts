@@ -59,7 +59,7 @@ export const Form = styled.form<FormProps>`
 `;
 
 export const Repos = styled.div`
-  margin-top: 80px;
+  margin-top: 40px;
   max-width: 700px;
   a {
     background: #fff;
@@ -106,8 +106,14 @@ export const Repos = styled.div`
   }
 `;
 
-export const Error = styled.span`
-  display: block;
+export const Error = styled.p`
   color: #c53030;
   margin-top: 8px;
+  margin-left: 5px;
+`;
+
+export const Success = styled.p`
+  color: #04d361;
+  margin-top: 8px;
+  margin-left: 5px;
 `;
