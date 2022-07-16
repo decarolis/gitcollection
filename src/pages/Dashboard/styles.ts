@@ -59,8 +59,42 @@ export const Form = styled.form<FormProps>`
 `;
 
 export const Repos = styled.div`
-  margin-top: 40px;
-  max-width: 700px;
+  margin-top: 30px;
+  max-width: 760px;
+  div {
+    display: flex;
+    align-items: center;
+    div {
+      margin: 0 16px;
+      flex: 1;
+      border: none;
+      display: block;
+
+      strong {
+        font-size: 20px;
+        color: #3d3d4d;
+      }
+
+      p {
+        font-size: 18px;
+        color: #a8a8b3;
+        margin-top: 4px;
+      }
+    }
+
+    & + div {
+      margin-top: 16px;
+    }
+
+    svg {
+      margin-left: 40px;
+      color: #a8a8b3;
+      &:hover {
+        color: #555555;
+        cursor: pointer;
+      }
+    }
+  }
   a {
     background: #fff;
     border-radius: 5px;
@@ -73,30 +107,10 @@ export const Repos = styled.div`
       transform: translateX(6px);
     }
 
-    & + a {
-      margin-top: 16px;
-    }
-
     img {
       width: 64px;
       height: 64px;
       border-radius: 50%;
-    }
-
-    div {
-      margin: 0 16px;
-      flex: 1;
-
-      strong {
-        font-size: 20px;
-        color: #3d3d4d;
-      }
-
-      p {
-        font-size: 18px;
-        color: #a8a8b3;
-        margin-top: 4px;
-      }
     }
 
     svg {

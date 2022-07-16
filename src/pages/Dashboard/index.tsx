@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiChevronRight } from 'react-icons/fi';
+import { FiChevronRight, FiTrash2 } from 'react-icons/fi';
 import logo from '../../assets/logo.svg';
 
 // api
@@ -34,6 +34,16 @@ export const Dashboard: React.FC = () => {
     localStorage.setItem('@GitCollection:repositories', JSON.stringify(repos));
   }, [repos]);
 
+  const handleRmRepo = (repoName: string) => {
+    for (let i = 0; i < repos.length; i++) {
+      const repositories = JSON.parse(JSON.stringify(repos));
+      if (repositories[i].full_name === repoName) {
+        repositories.splice(i, 1);
+        setRepos(repositories);
+      }
+    }
+  };
+
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement>,
   ): void => {
@@ -47,7 +57,7 @@ export const Dashboard: React.FC = () => {
 
     if (!newRepo) {
       (() => {
-        setInputError('Enter username/repository');
+        setInputError('Enter: username/repository');
         setTimeout(() => {
           setInputError('');
         }, 3000);
@@ -110,20 +120,23 @@ export const Dashboard: React.FC = () => {
 
       <Repos>
         {repos.map(repository => (
-          <Link
-            to={`/repositories/${repository.full_name}`}
-            key={repository.full_name}
-          >
-            <img
-              src={repository.owner.avatar_url}
-              alt={repository.owner.login}
+          <div key={repository.full_name}>
+            <Link to={`/repositories/${repository.full_name}`}>
+              <img
+                src={repository.owner.avatar_url}
+                alt={repository.owner.login}
+              />
+              <div>
+                <strong>{repository.full_name}</strong>
+                <p>{repository.description}</p>
+              </div>
+              <FiChevronRight size={20} />
+            </Link>
+            <FiTrash2
+              size={20}
+              onClick={() => handleRmRepo(repository.full_name)}
             />
-            <div>
-              <strong>{repository.full_name}</strong>
-              <p>{repository.description}</p>
-            </div>
-            <FiChevronRight size={20} />
-          </Link>
+          </div>
         ))}
       </Repos>
     </>

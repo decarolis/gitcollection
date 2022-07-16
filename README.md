@@ -1,6 +1,9 @@
 # Git Collection
 
-Git Collection é uma aplicação para criar uma lista dos seus repositórios favoritos.
+Basic React application that uses Create-React-App and the Styled Components library.
+It consumes the public github api to create a catalog with your favorite repositories.
+
+https://collectiongithub.netlify.app/
 
 <img src="./src/assets/tela1.png" width="460">
 <img src="./src/assets/tela2.png" width="460">
