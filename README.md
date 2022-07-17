@@ -8,27 +8,27 @@ https://collectiongithub.netlify.app/
 <img src="./src/assets/tela1.png" width="460">
 <img src="./src/assets/tela2.png" width="460">
 
-## 🚀 Começando
+## 🚀 Starting
 
-Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
+These instructions will allow you to make a working copy of the project on your local machine for development and testing purposes.
 
-### 📋 Pré-requisitos
+### 📋 Prerequisites
 
-De que coisas você precisa para instalar o software e como instalá-lo?
+What things do you need to install the software?
 
 ```
 node.js ^12
 ```
 
-### 🔧 Instalação
+### 🔧 Installation
 
-Faça um clone deste repositório e instale no seu ambiente de desenvolvimento usando o seguinte comando no seu terminal (escolha um diretório apropriado):
+Make a clone of this repository and install it in your development environment using the following command in your terminal (choose an appropriate directory):
 
 ```
 git clone https://github.com/decarolis/gitcollection.git
 ```
 
-Após clonar o conteúdo do repositório, acesse o diretório criado e efetue a instalação das dependências:
+After cloning the repository content, access the created directory and install the dependencies:
 
 ```
 cd gitcollection
@@ -36,9 +36,9 @@ cd gitcollection
 npm install
 ```
 
-Após essa instalação execute a aplicação com o comando npm start. A aplicação estará disponível no endereço http://localhost:3000.
+After this installation, run the application with the npm start command. The application will be available at http://localhost:3000.
 
-## 🛠️ Construído com
+## 🛠️ built with
 
 * [React.17]
 * [TypeScript]
@@ -46,10 +46,10 @@ Após essa instalação execute a aplicação com o comando npm start. A aplica�
 * [StyledComponents]
 * [React-Router-Dom.5]
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença (MIT License)
+This project is under the MIT License
 
 
 ---
-⌨️ com ❤️ por [André De Carolis](https://github.com/decarolis) 😊
+⌨️ with ❤️ by [André De Carolis](https://github.com/decarolis) 😊
